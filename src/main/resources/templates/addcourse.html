@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+<form action="#" method="POST" th:action="@{/course/addcourse}" th:object="${course}">
+  <input type="text" name="noteId" th:field="*{id}" id="note-id">
+  <div class="form-group">
+    <label for="note-title" class="col-form-label">Title</label>
+    <input type="text" name= "noteTitle" th:field="*{Title}" class="form-control" id="note-title" maxlength="20" required>
+  </div>
+  <div class="form-group">
+    <label for="note-description" class="col-form-label">Description</label>
+    <textarea class="form-control" name="noteDescription"  th:field= "*{Description}" id="note-description" rows="5" maxlength="1000" required></textarea>
+  </div>
+  <button id="noteSubmit" type="submit" class="d-none"></button>
+</form>
+
+  </div>
+
+</body>
+</html>

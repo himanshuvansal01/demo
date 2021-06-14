@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
+    <title>Title</title>
+
+  <style>
+
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+
+
+</head>
+<body>
+
+<button style="margin: 0.25em;" type="button" class="btn btn-info float-right"  onclick="location.href = 'http://localhost:8080/addcourse';"
+        id="btnAddNewNote">
+  + Add a New Course
+</button>
+
+<button style="margin: 0.25em;" type="button" class="btn btn-info float-right"  onclick="location.href = 'http://localhost:8080/course/DeleteCourse';"
+        >
+  + DeleteCourseByID
+</button>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  <tr th:each=  "msg:  ${greetings}">
+    <td th:text = "${msg.getId()}"></td>
+    <td th:text = "${msg.getTitle()}"></td>
+    <td th:text   = "${msg.getDescription()}"></td>
+
+
+  </tr>
+
+
+</table>
+
+<script th:src="@{/js/jquery-slim.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+
+
+
+
+
+</body>
+
+
+</html>
