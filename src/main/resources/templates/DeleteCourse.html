@@ -8,7 +8,7 @@
 
 <div>
   <form action="#" method="POST" th:action="@{/course/DeleteCourse}" th:object="${delete}">
-    <input type="text" name="noteId" th:field="*{id}" id="note-id">
+    <input type="text"  th:field="*{id}" id="note-id">
 
     <button id="noteSubmit" type="submit" class="d-none"></button>
   </form>

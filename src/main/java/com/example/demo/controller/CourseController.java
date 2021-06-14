@@ -21,6 +21,7 @@ public class CourseController {
     }
 
     @GetMapping("/courses" )
+    @CrossOrigin(origins = "http://localhost:8080")
     public List<Course> getCourse(){
         return courseService.getCourse();
     }
